@@ -59,7 +59,7 @@
 - id: helm-unittest
   name: Helm-unittest
   description: This hook run helm unittest from quintush/helm-unittest
-  entry: helm unittest -3 .
+  entry: bin/helm-unittest.sh
   language: script
   pass_filenames: false
   always_run: true
