@@ -70,6 +70,7 @@
   entry: ansible-lint --force-color
   language: python
   pass_filenames: false
+  require_serial: true
   always_run: true
 
 - id: docker-lint
