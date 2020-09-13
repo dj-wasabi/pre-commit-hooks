@@ -50,7 +50,13 @@ helm plugin install https://github.com/quintush/helm-unittest
 
 ## Usage
 
+
+Create a file named `.pre-commit-config.yaml` in the repository.
+
+Add something like the following:
+
 ```yaml
+---
 repos:
 - repo: https://github.com/dj-wasabi/pre-commit-hooks
   rev: master
@@ -58,4 +64,16 @@ repos:
     - id: terraform-fmt
     - id: terraform-docs
     - id: terraform-sec
+```
+
+When the file is added, run the following command to install it:
+
+```s
+pre-commit install
+```
+
+Now, when you do a `git commit` the hooks are executed. You can manually run the hooks by executing the following command:
+
+```sh
+pre-commit run -a
 ```
