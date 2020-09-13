@@ -14,7 +14,8 @@ A bunch of scripts (founds on different places, provided link where they were fo
 
 
 The following scripts are in this repository:
-* ansible-lint (Package: `ansible-lint`)
+* ansible-lint (Package: `ansible-lint`);
+* docker-lint;
 * terraform-docs (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_docs.sh);
 * terraform-fmt (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_fmt.sh);
 * terraform-lint (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_tflint.sh);
@@ -36,7 +37,7 @@ The following needs to be installed when you want to use all of the hooks.
 
 ```sh
 brew tap liamg/tfsec
-brew install gawk terraform-docs tflint tfsec coreutils helm
+brew install gawk terraform-docs tflint tfsec coreutils helm hadolint
 ```
 
 ```sh

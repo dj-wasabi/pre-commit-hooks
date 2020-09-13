@@ -71,3 +71,10 @@
   language: python
   pass_filenames: false
   always_run: true
+
+- id: hado-lint
+  name: Lint Dockerfiles
+  description: Runs hadolint to lint Dockerfiles
+  language: script
+  entry: bin/docker-lint.sh
+  files: Dockerfil*
