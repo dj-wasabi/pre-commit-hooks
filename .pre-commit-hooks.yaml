@@ -49,12 +49,20 @@
   exclude: \.+.terraform\/.*$
   require_serial: true
 
-- id: helmlint
+- id: helm-lint
   name: helmlint
   description: Run helm lint, a linter for helm charts
-  entry: bin/helmlint.sh
+  entry: bin/helm-lint.sh
   language: script
   files: \.((ya?ml)|(tpl))$
+
+- id: helm-unittest
+  name: Helm-unittest
+  description: This hook run helm unittest from quintush/helm-unittest
+  entry: helm unittest -3 .
+  language: script
+  pass_filenames: false
+  always_run: true
 
 - id: ansible-lint
   name: Ansible-lint
