@@ -72,7 +72,7 @@
   pass_filenames: false
   always_run: true
 
-- id: hado-lint
+- id: docker-lint
   name: Lint Dockerfiles
   description: Runs hadolint to lint Dockerfiles
   language: script
