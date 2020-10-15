@@ -7,11 +7,7 @@ Table of contents
   * [Supporting packages](#supporting-packages)
   * [Usage](#usage)
 
-
 A bunch of scripts (founds on different places, provided link where they were found) that would help me to create better code.
-
-
-
 
 The following scripts are in this repository:
 * ansible-lint (Package: `ansible-lint`);
@@ -23,7 +19,6 @@ The following scripts are in this repository:
 * terraform-validate (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_validate.sh)
 * helm-lint (https://github.com/gruntwork-io/pre-commit/blob/master/hooks/helmlint.sh)
 * helm-unittest (HELM Plugin: https://github.com/quintush/helm-unittest)
-
 
 # Installation
 
@@ -50,7 +45,6 @@ helm plugin install https://github.com/quintush/helm-unittest
 ```
 
 ## Usage
-
 
 Create a file named `.pre-commit-config.yaml` in the repository.
 

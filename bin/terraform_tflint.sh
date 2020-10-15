@@ -1,30 +1,11 @@
 #!/usr/bin/env bash
+
 set -eo pipefail
 
 main() {
   initialize_
   parse_cmdline_ "$@"
-
-  # propagate $FILES to custom function
-  tfsec_ "$ARGS" "$FILES"
-}
-
-tfsec_() {
-  # consume modified files passed from pre-commit so that
-  # tfsec runs against only those relevant directories
-  for file_with_path in $FILES; do
-    file_with_path="${file_with_path// /__REPLACED__SPACE__}"
-    paths[index]=$(dirname "$file_with_path")
-
-    let "index+=1"
-  done
-
-  for path_uniq in $(echo "${paths[*]}" | tr ' ' '\n' | sort -u); do
-    path_uniq="${path_uniq//__REPLACED__SPACE__/ }"
-    pushd "$path_uniq" > /dev/null
-    tfsec $ARGS
-    popd > /dev/null
-  done
+  tflint_
 }
 
 initialize_() {
@@ -54,20 +35,41 @@ parse_cmdline_() {
     case $argv in
       -a | --args)
         shift
-        ARGS+=("$1")
+        expanded_arg="${1//__GIT_WORKING_DIR__/$PWD}"
+        ARGS+=("$expanded_arg")
         shift
         ;;
       --)
         shift
-        FILES+=("$@")
+        FILES=("$@")
         break
         ;;
     esac
   done
+
+}
+
+tflint_() {
+  local index=0
+  for file_with_path in "${FILES[@]}"; do
+    file_with_path="${file_with_path// /__REPLACED__SPACE__}"
+
+    paths[index]=$(dirname "$file_with_path")
+
+    ((index += 1))
+  done
+
+  for path_uniq in $(echo "${paths[*]}" | tr ' ' '\n' | sort -u); do
+    path_uniq="${path_uniq//__REPLACED__SPACE__/ }"
+
+    pushd "$path_uniq" > /dev/null
+    tflint "${ARGS[@]}"
+    popd > /dev/null
+  done
 }
 
 # global arrays
-declare -a ARGS=()
-declare -a FILES=()
+declare -a ARGS
+declare -a FILES
 
 [[ ${BASH_SOURCE[0]} != "$0" ]] || main "$@"

@@ -116,7 +116,7 @@ terraform_validate_() {
   fi
 }
 
-# global arrays
+# global arrays
 declare -a ARGS
 declare -a ENVS
 declare -a FILES
