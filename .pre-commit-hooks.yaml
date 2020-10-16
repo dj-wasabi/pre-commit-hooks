@@ -71,7 +71,7 @@
   language: python
   pass_filenames: false
   require_serial: true
-  always_run: true
+  always_run: false
 
 - id: docker-lint
   name: Lint Dockerfiles
