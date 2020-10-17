@@ -69,9 +69,8 @@
   description: This hook runs ansible-lint.
   entry: ansible-lint --force-color
   language: python
-  # do not pass files to ansible-lint, see:
-  # https://github.com/ansible/ansible-lint/issues/611
   pass_filenames: false
+  require_serial: true
   always_run: true
 
 - id: docker-lint
@@ -80,3 +79,9 @@
   language: script
   entry: bin/docker-lint.sh
   files: Dockerfil*
+
+- id: shellcheck
+  name: Shellcheck Bash Linter
+  description: Performs linting on bash scripts
+  entry: hooks/shellcheck.sh
+  language: script

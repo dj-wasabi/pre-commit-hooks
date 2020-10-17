@@ -16,9 +16,10 @@ The following scripts are in this repository:
 * terraform-fmt (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_fmt.sh);
 * terraform-lint (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_tflint.sh);
 * terraform-sec (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_tfsec.sh);
-* terraform-validate (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_validate.sh)
-* helm-lint (https://raw.githubusercontent.com/gruntwork-io/pre-commit/master/hooks/helmlint.sh)
-* helm-unittest (HELM Plugin: https://github.com/quintush/helm-unittest)
+* terraform-validate (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_validate.sh);
+* helm-lint (https://raw.githubusercontent.com/gruntwork-io/pre-commit/master/hooks/helmlint.sh);
+* helm-unittest (HELM Plugin: https://github.com/quintush/helm-unittest);
+* shellcheck (https://raw.githubusercontent.com/gruntwork-io/pre-commit/master/hooks/shellcheck.sh);
 
 # Installation
 
@@ -32,7 +33,7 @@ The following needs to be installed when you want to use all of the hooks.
 
 ```sh
 brew tap liamg/tfsec
-brew install gawk terraform-docs tflint tfsec coreutils helm hadolint
+brew install gawk terraform-docs tflint tfsec coreutils helm hadolint shellcheck
 ```
 
 ```sh
