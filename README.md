@@ -15,9 +15,9 @@ The following scripts are in this repository:
 * terraform-docs (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_docs.sh);
 * terraform-fmt (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_fmt.sh);
 * terraform-lint (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_tflint.sh);
-* terraform-sec (https://github.com/antonbabenko/pre-commit-terraform/blob/master/terraform_tfsec.sh);
+* terraform-sec (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_tfsec.sh);
 * terraform-validate (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_validate.sh)
-* helm-lint (https://github.com/gruntwork-io/pre-commit/blob/master/hooks/helmlint.sh)
+* helm-lint (https://raw.githubusercontent.com/gruntwork-io/pre-commit/master/hooks/helmlint.sh)
 * helm-unittest (HELM Plugin: https://github.com/quintush/helm-unittest)
 
 # Installation
