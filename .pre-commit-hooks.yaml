@@ -74,5 +74,5 @@
 - id: shellcheck
   name: Shellcheck Bash Linter
   description: Performs linting on bash scripts
-  entry: hooks/shellcheck.sh
+  entry: bin/shellcheck.sh
   language: script
