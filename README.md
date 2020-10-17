@@ -10,7 +10,6 @@ Table of contents
 A bunch of scripts (founds on different places, provided link where they were found) that would help me to create better code.
 
 The following scripts are in this repository:
-* ansible-lint (Package: `ansible-lint`);
 * docker-lint;
 * terraform-docs (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_docs.sh);
 * terraform-fmt (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_fmt.sh);
