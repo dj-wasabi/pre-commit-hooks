@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.0.2](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.0.2) (2020-12-21)
+
+[Full Changelog](https://github.com/dj-wasabi/pre-commit-hooks/compare/0.0.1...0.0.2)
+
+**Merged pull requests:**
+
+- Updated some terraform related scripts [\#4](https://github.com/dj-wasabi/pre-commit-hooks/pull/4) ([dj-wasabi](https://github.com/dj-wasabi))
+
 ## [0.0.1](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.0.1) (2020-10-17)
 
 [Full Changelog](https://github.com/dj-wasabi/pre-commit-hooks/compare/d6bb69ec6f7b1783ef07e48842cea98517e88fcb...0.0.1)
