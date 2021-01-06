@@ -1,10 +1,18 @@
 # Changelog
 
+## [Unreleased](https://github.com/dj-wasabi/pre-commit-hooks/tree/HEAD)
+
+[Full Changelog](https://github.com/dj-wasabi/pre-commit-hooks/compare/0.0.2...HEAD)
+
+**Implemented enhancements:**
+
+- Added GH Action to automatically update CHANGELOG.md [\#5](https://github.com/dj-wasabi/pre-commit-hooks/pull/5) ([dj-wasabi](https://github.com/dj-wasabi))
+
 ## [0.0.2](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.0.2) (2020-12-21)
 
 [Full Changelog](https://github.com/dj-wasabi/pre-commit-hooks/compare/0.0.1...0.0.2)
 
-**Merged pull requests:**
+**Implemented enhancements:**
 
 - Updated some terraform related scripts [\#4](https://github.com/dj-wasabi/pre-commit-hooks/pull/4) ([dj-wasabi](https://github.com/dj-wasabi))
 
@@ -12,10 +20,13 @@
 
 [Full Changelog](https://github.com/dj-wasabi/pre-commit-hooks/compare/d6bb69ec6f7b1783ef07e48842cea98517e88fcb...0.0.1)
 
-**Merged pull requests:**
+**Implemented enhancements:**
+
+- Added shellcheck script [\#2](https://github.com/dj-wasabi/pre-commit-hooks/pull/2) ([dj-wasabi](https://github.com/dj-wasabi))
+
+**Fixed bugs:**
 
 - Removal of Ansible lint [\#3](https://github.com/dj-wasabi/pre-commit-hooks/pull/3) ([dj-wasabi](https://github.com/dj-wasabi))
-- Added shellcheck script [\#2](https://github.com/dj-wasabi/pre-commit-hooks/pull/2) ([dj-wasabi](https://github.com/dj-wasabi))
 - Fix helm-lint and terraform-tfsec scripts [\#1](https://github.com/dj-wasabi/pre-commit-hooks/pull/1) ([dj-wasabi](https://github.com/dj-wasabi))
 
 
