@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/dj-wasabi/pre-commit-hooks/tree/HEAD)
+## [0.0.3](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.0.3) (2021-01-19)
 
-[Full Changelog](https://github.com/dj-wasabi/pre-commit-hooks/compare/0.0.2...HEAD)
+[Full Changelog](https://github.com/dj-wasabi/pre-commit-hooks/compare/0.0.2...0.0.3)
 
 **Implemented enhancements:**
 
