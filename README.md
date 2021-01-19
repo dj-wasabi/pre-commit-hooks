@@ -3,9 +3,33 @@
 Table of contents
 
 - [Pre-commit-hooks](#pre-commit-hooks)
+  * [Hooks](#hooks)
+  * [Scripts](#scripts)
 - [Installation](#installation)
   * [Supporting packages](#supporting-packages)
   * [Usage](#usage)
+
+
+## Hooks
+
+This pre-commit-hooks repository contains the following hooks.
+
+| Hook name     | Description |
+|---------------|------------|
+|terraform-docs| Inserts input and output documentation into README.md (using terraform-docs).|
+|terraform-validate|Validates all Terraform configuration files.|
+|terraform-sec|Static analysis of Terraform templates to spot potential security issues.|
+|terraform-lint|Validates all Terraform configuration files with TFLint.|
+|terraform-fmt|Rewrites all Terraform configuration files to a canonical format.|
+|checkov|Runs checkov on Terraform templates.|
+|helm-lint|Run helm lint, a linter for helm charts|
+|helm-unittest|This hook run helm unittest from quintush/helm-unittest|
+|docker-lint|Runs hadolint to lint Dockerfiles|
+|shellcheck|Performs linting on bash scripts|
+
+The hook name can be used with the `.pre-commit-config.yaml` as `id`. See [usage](#usage) for an example.
+
+## Scripts
 
 A bunch of scripts (founds on different places, provided link where they were found) that would help me to create better code.
 
