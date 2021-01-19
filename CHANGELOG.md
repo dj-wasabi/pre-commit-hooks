@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- Update documentation regarding available hooks [\#6](https://github.com/dj-wasabi/pre-commit-hooks/pull/6) ([dj-wasabi](https://github.com/dj-wasabi))
 - Added GH Action to automatically update CHANGELOG.md [\#5](https://github.com/dj-wasabi/pre-commit-hooks/pull/5) ([dj-wasabi](https://github.com/dj-wasabi))
 
 ## [0.0.2](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.0.2) (2020-12-21)
