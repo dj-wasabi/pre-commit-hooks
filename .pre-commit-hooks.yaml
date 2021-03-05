@@ -75,3 +75,17 @@
   description: Performs linting on bash scripts
   entry: bin/shellcheck.sh
   language: script
+
+- id: verify-json
+  name: Pretty Print JSON files
+  description: Checks JSON files and pretty prints them
+  entry: bin/verify-json.sh
+  language: script
+  files: \.json$
+
+- id: verify-yaml
+  name: Pretty Print YAML files
+  description: Checks YAML files and pretty prints them
+  entry: bin/verify-yaml.sh
+  language: script
+  files: \.(ya?ml)$
