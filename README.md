@@ -93,7 +93,7 @@ brew install gawk terraform-docs tflint tfsec coreutils helm hadolint shellcheck
 ```
 
 ```sh
-pip install checkov ansible-lint yamlfmt
+pip install checkov ansible-lint yamlfmt md-toc
 ```
 
 Install the HELM Unittests
