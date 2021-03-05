@@ -89,3 +89,10 @@
   entry: bin/verify-yaml.sh
   language: script
   files: \.(ya?ml)$
+
+- id: markdown-toc
+  name: Generate Markdown toc
+  description: Generate a Table of Contents in a Markdown Document
+  entry: bin/markdown-toc.sh
+  language: script
+  files: \.md$
