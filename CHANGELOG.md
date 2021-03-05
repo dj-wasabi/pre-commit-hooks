@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- Added hook for creating a Table of Contents for Markdown files [\#8](https://github.com/dj-wasabi/pre-commit-hooks/pull/8) ([dj-wasabi](https://github.com/dj-wasabi))
 - Added verify-json|yaml scripts [\#7](https://github.com/dj-wasabi/pre-commit-hooks/pull/7) ([dj-wasabi](https://github.com/dj-wasabi))
 
 ## [0.0.3](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.0.3) (2021-01-19)
