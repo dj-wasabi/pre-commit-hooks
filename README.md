@@ -26,6 +26,8 @@ This pre-commit-hooks repository contains the following hooks.
 |helm-unittest|This hook run helm unittest from quintush/helm-unittest|
 |docker-lint|Runs hadolint to lint Dockerfiles|
 |shellcheck|Performs linting on bash scripts|
+|verify-json|Checks JSON files and pretty prints them|
+|verify-yaml|Checks YAML files and pretty prints them|
 
 The hook name can be used with the `.pre-commit-config.yaml` as `id`. See [usage](#usage) for an example.
 
@@ -43,6 +45,8 @@ The following scripts are in this repository:
 * helm-lint (https://raw.githubusercontent.com/gruntwork-io/pre-commit/master/hooks/helmlint.sh);
 * helm-unittest (HELM Plugin: https://github.com/quintush/helm-unittest);
 * shellcheck (https://raw.githubusercontent.com/gruntwork-io/pre-commit/master/hooks/shellcheck.sh);
+* verify-json.sh
+* verify-yaml.sh
 
 # Installation
 
@@ -60,7 +64,7 @@ brew install gawk terraform-docs tflint tfsec coreutils helm hadolint shellcheck
 ```
 
 ```sh
-pip install checkov ansible-lint
+pip install checkov ansible-lint yamlfmt
 ```
 
 Install the HELM Unittests
