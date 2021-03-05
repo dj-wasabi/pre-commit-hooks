@@ -33,7 +33,7 @@ jobs:
         cd main
 
         # Generate CHANGELOG.md file
-        ../dj-wasabi-release/release.sh -d
+        ../dj-wasabi-release/release.py -d
 
         # Let commit the changes if there are any? (Well there should be!)
         if [[ $(git status | grep -c 'CHANGELOG.md' || true) -gt 0 ]]
