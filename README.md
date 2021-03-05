@@ -1,13 +1,19 @@
 # Pre-commit-hooks
 
-Table of contents
+**Table of contents**
+<!--TOC-->
 
 - [Pre-commit-hooks](#pre-commit-hooks)
-  * [Hooks](#hooks)
-  * [Scripts](#scripts)
+  - [Hooks](#hooks)
+  - [Scripts](#scripts)
 - [Installation](#installation)
-  * [Supporting packages](#supporting-packages)
-  * [Usage](#usage)
+  - [Prerequisites Documentation](#prerequisites-documentation)
+    - [terraform-docs](#terraform-docs)
+    - [markdown-toc](#markdown-toc)
+  - [Supporting packages](#supporting-packages)
+  - [Usage](#usage)
+
+<!--TOC-->
 
 
 ## Hooks
@@ -28,6 +34,7 @@ This pre-commit-hooks repository contains the following hooks.
 |shellcheck|Performs linting on bash scripts|
 |verify-json|Checks JSON files and pretty prints them|
 |verify-yaml|Checks YAML files and pretty prints them|
+|markdown-toc|Generate a Table of Contents in a Markdown Document|
 
 The hook name can be used with the `.pre-commit-config.yaml` as `id`. See [usage](#usage) for an example.
 
@@ -47,11 +54,33 @@ The following scripts are in this repository:
 * shellcheck (https://raw.githubusercontent.com/gruntwork-io/pre-commit/master/hooks/shellcheck.sh);
 * verify-json.sh
 * verify-yaml.sh
+* markdown-toc.sh
 
 # Installation
 
 ```sh
 brew install pre-commit
+```
+
+## Prerequisites Documentation
+
+The following needs to be set in order to get several hooks work related to documentation.
+
+### terraform-docs
+
+For updating Markdown documentation with information that is generated from Terraform, you will need to add the following 2 lines in the document.
+
+```md
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+```
+
+### markdown-toc
+
+The following needs to be added in the Markdown document to generate a Table of content:
+
+```md
+<!--TOC-->
 ```
 
 ## Supporting packages
