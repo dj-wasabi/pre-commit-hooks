@@ -145,5 +145,5 @@ repos:
   rev: master
   hooks:
     - id: no-commit-on-branch
-      args: [-a=master,main]
+      args: ['-b master,main']
 ```
