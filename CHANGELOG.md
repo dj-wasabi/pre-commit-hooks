@@ -6,12 +6,20 @@
 
 **Implemented enhancements:**
 
+- Added script that not allows any commits on configured branch [\#12](https://github.com/dj-wasabi/pre-commit-hooks/pull/12) ([dj-wasabi](https://github.com/dj-wasabi))
 - Added hook for creating a Table of Contents for Markdown files [\#8](https://github.com/dj-wasabi/pre-commit-hooks/pull/8) ([dj-wasabi](https://github.com/dj-wasabi))
 - Added verify-json|yaml scripts [\#7](https://github.com/dj-wasabi/pre-commit-hooks/pull/7) ([dj-wasabi](https://github.com/dj-wasabi))
 
 **Fixed bugs:**
 
+- Removed debug info, fixed hook for no commits on branch and updated documentation with correct argument [\#13](https://github.com/dj-wasabi/pre-commit-hooks/pull/13) ([dj-wasabi](https://github.com/dj-wasabi))
+- Forced to use a specifing Python version \(Github Actions\) [\#11](https://github.com/dj-wasabi/pre-commit-hooks/pull/11) ([dj-wasabi](https://github.com/dj-wasabi))
 - Make sure we validate our own stuff with the stuff we create [\#9](https://github.com/dj-wasabi/pre-commit-hooks/pull/9) ([dj-wasabi](https://github.com/dj-wasabi))
+
+**Merged pull requests:**
+
+- Added debug [\#14](https://github.com/dj-wasabi/pre-commit-hooks/pull/14) ([dj-wasabi](https://github.com/dj-wasabi))
+- Make use of new python script of release script [\#10](https://github.com/dj-wasabi/pre-commit-hooks/pull/10) ([dj-wasabi](https://github.com/dj-wasabi))
 
 ## [0.0.3](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.0.3) (2021-01-19)
 
