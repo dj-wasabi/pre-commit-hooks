@@ -6,10 +6,11 @@ while getopts b: flag
 do
     case "${flag}" in
         b) BRANCHES=${OPTARG};;
-        *) echo "Fail"
+        *) echo "Unsupported option provided."
            exit 1;;
     esac
 done
+# BRANCHES=${BRANCHES:-"master,main"}
 
 for BRANCH in $(echo ${BRANCHES} | sed 's/,/ /g');
     do

@@ -102,3 +102,4 @@
   description: Do no allow any commit on either specified branch.
   entry: bin/no-commit-on-branch.sh
   language: script
+  always_run: true
