@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Do not allow commits on provided branches.
 
+set -x
+
 EXITCODE=0
 while getopts b: flag
 do
