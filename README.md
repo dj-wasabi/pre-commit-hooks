@@ -12,10 +12,11 @@
     - [markdown-toc](#markdown-toc)
   - [Supporting packages](#supporting-packages)
   - [Usage](#usage)
+    - [no-commit-on-branch](#no-commit-on-branch)
 
 <!--TOC-->
 
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/dj-wasabi/pre-commit-hooks)
 
 ## Hooks
 
@@ -36,6 +37,7 @@ This pre-commit-hooks repository contains the following hooks.
 |verify-json|Checks JSON files and pretty prints them|
 |verify-yaml|Checks YAML files and pretty prints them|
 |markdown-toc|Generate a Table of Contents in a Markdown Document|
+|no-commit-on-branch|Do no allow any commit on either specified branch.|
 
 The hook name can be used with the `.pre-commit-config.yaml` as `id`. See [usage](#usage) for an example.
 
@@ -43,7 +45,7 @@ The hook name can be used with the `.pre-commit-config.yaml` as `id`. See [usage
 
 A bunch of scripts (founds on different places, provided link where they were found) that would help me to create better code.
 
-The following scripts are in this repository:
+The following scripts are in this repository in the `bin/` directory:
 * docker-lint;
 * terraform-docs (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_docs.sh);
 * terraform-fmt (https://raw.githubusercontent.com/antonbabenko/pre-commit-terraform/master/terraform_fmt.sh);
@@ -56,6 +58,7 @@ The following scripts are in this repository:
 * verify-json.sh
 * verify-yaml.sh
 * markdown-toc.sh
+* no-commit-on-branch.sh
 
 # Installation
 
@@ -129,4 +132,18 @@ Now, when you do a `git commit` the hooks are executed. You can manually run the
 
 ```sh
 pre-commit run -a
+```
+
+### no-commit-on-branch
+
+The following is an example on how to not allow commits into the `main` or `master` branch:
+
+```yaml
+---
+repos:
+- repo: https://github.com/dj-wasabi/pre-commit-hooks
+  rev: master
+  hooks:
+    - id: no-commit-on-branch
+      args: [-a=master,main]
 ```

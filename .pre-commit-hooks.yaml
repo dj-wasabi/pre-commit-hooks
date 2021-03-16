@@ -96,3 +96,9 @@
   entry: bin/markdown-toc.sh
   language: script
   files: \.md$
+
+- id: no-commit-on-branch
+  name: No commit on master or main
+  description: Do no allow any commit on either specified branch.
+  entry: bin/no-commit-on-branch.sh
+  language: script

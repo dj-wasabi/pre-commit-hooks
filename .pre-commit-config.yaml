@@ -11,4 +11,5 @@ repos:
   - id: verify-json
   - id: verify-yaml
   - id: markdown-toc
-  # - id: shellcheck
+  # - id: no-commit-on-branch
+  #   args: [-a=master,main]
