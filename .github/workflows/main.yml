@@ -43,6 +43,7 @@ jobs:
         # We are cloned in the 'main' directory and the dj-wasabi-release
         # repository is the 'dj-wasabi-release' next to 'main'
         cd main
+        git config --get remote.origin.url
 
         # Generate CHANGELOG.md file
         ../dj-wasabi-release/release.py -d
