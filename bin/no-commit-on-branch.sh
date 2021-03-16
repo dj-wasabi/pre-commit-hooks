@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Do not allow commits on provided branches.
 
-set -x
 
 EXITCODE=0
 while getopts b: flag
@@ -12,7 +11,6 @@ do
            exit 1;;
     esac
 done
-# BRANCHES=${BRANCHES:-"master,main"}
 
 for BRANCH in $(echo ${BRANCHES} | sed 's/,/ /g');
     do
