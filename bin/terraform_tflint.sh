@@ -61,9 +61,15 @@ tflint_() {
 
   for path_uniq in $(echo "${paths[*]}" | tr ' ' '\n' | sort -u); do
     path_uniq="${path_uniq//__REPLACED__SPACE__/ }"
-
     pushd "$path_uniq" > /dev/null
-    tflint "${ARGS[@]}"
+
+    # Print checked PATH **only** if TFLint have any messages
+    # shellcheck disable=SC2091 # Suppress error output
+    $(tflint "${ARGS[@]}" 2>&1) 2> /dev/null || {
+      echo >&2 -e "\033[1;33m\nTFLint in $path_uniq/:\033[0m"
+      tflint "${ARGS[@]}"
+    }
+
     popd > /dev/null
   done
 }

@@ -7,6 +7,15 @@
   files: (\.tf)$
   exclude: \.terraform\/.*$
 
+- id: terraform-docs-adoc
+  name: Terraform docs Asciidoctor
+  description: Inserts input and output documentation into README.adoc (using terraform-docs).
+  require_serial: true
+  entry: bin/terraform_docs_asciidoc.sh
+  language: script
+  files: (\.tf)$
+  exclude: \.terraform\/.*$
+
 - id: terraform-validate
   name: Terraform validate
   description: Validates all Terraform configuration files.
