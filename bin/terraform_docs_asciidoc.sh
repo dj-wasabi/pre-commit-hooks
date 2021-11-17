@@ -2,7 +2,7 @@
 
 set -x
 
-while getopts -u f:o:s: flag
+while getopts f:o:s: flag -u
 do
     case "${flag}" in
         f) ASCIIDOC_FILE=${OPTARG};;
