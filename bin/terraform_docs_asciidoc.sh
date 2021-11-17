@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
-
 while getopts f:o:s: flag
 do
     case "${flag}" in
@@ -13,9 +11,9 @@ do
     esac
 done
 
-ASCIIDOC_FILE=${ASCIIDOC_FILE:-file1.adoc}
+ASCIIDOC_FILE=${ASCIIDOC_FILE:-README.adoc}
 TERRAFORM_ARGS="${TERRAFORM_ARGS:---indent 3}"
-TERRAFORM_SOURCE="${TERRAFORM_SOURCE:-src}"
+TERRAFORM_SOURCE="${TERRAFORM_SOURCE:-.}"
 
 tmp_file_tfdoc=$(mktemp "${TMPDIR:-/tmp}/terraform-docs-XXXXXXXXXX")
 tmp_file_asciidoc=$(mktemp "${TMPDIR:-/tmp}/terraform-docs-XXXXXXXXXX")
@@ -32,7 +30,9 @@ perl -pe '
 ASCIIDOC_DIFF=$(diff ${ASCIIDOC_FILE} $tmp_file_asciidoc >/dev/null;echo $?)
 if [[ $ASCIIDOC_DIFF -eq 1 ]]
     then    cp -p $tmp_file_asciidoc ${ASCIIDOC_FILE}
+            rm -f $tmp_file_tfdoc $tmp_file_asciidoc
+            exit 1
 fi
 
 rm -f $tmp_file_tfdoc $tmp_file_asciidoc
-exit 1
+exit 0
