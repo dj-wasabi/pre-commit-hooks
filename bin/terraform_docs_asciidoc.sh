@@ -35,3 +35,4 @@ if [[ $ASCIIDOC_DIFF -eq 1 ]]
 fi
 
 rm -f $tmp_file_tfdoc $tmp_file_asciidoc
+exit 1
