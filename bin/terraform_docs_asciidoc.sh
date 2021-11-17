@@ -13,7 +13,7 @@ done
 
 ASCIIDOC_FILE=${ASCIIDOC_FILE:-file1.adoc}
 TERRAFORM_ARGS="${TERRAFORM_ARGS:---indent 3}"
-TERRAFORM_SOURCE="${TERRAFORM_SOURCE:-src"
+TERRAFORM_SOURCE="${TERRAFORM_SOURCE:-src}"
 
 tmp_file_tfdoc=$(mktemp "${TMPDIR:-/tmp}/terraform-docs-XXXXXXXXXX")
 tmp_file_asciidoc=$(mktemp "${TMPDIR:-/tmp}/terraform-docs-XXXXXXXXXX")
