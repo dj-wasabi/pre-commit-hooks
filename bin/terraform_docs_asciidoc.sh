@@ -33,7 +33,5 @@ ASCIIDOC_DIFF=$(diff ${ASCIIDOC_FILE} $tmp_file_asciidoc >/dev/null;echo $?)
 if [[ $ASCIIDOC_DIFF -eq 1 ]]
     then    cp -p $tmp_file_asciidoc ${ASCIIDOC_FILE}
 fi
-# echo $ASCIIDOC_DIFF
-# echo $tmp_file_tfdoc
 
 rm -f $tmp_file_tfdoc $tmp_file_asciidoc

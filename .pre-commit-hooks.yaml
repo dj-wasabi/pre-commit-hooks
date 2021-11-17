@@ -13,7 +13,6 @@
   require_serial: true
   entry: bin/terraform_docs_asciidoc.sh
   language: script
-  files: (\.tf)$
   exclude: \.terraform\/.*$
 
 - id: terraform-validate
