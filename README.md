@@ -9,6 +9,7 @@
 - [Installation](#installation)
   - [Prerequisites Documentation](#prerequisites-documentation)
     - [terraform-docs](#terraform-docs)
+    - [terraform-docs-adoc](#terraform-docs-adoc)
     - [markdown-toc](#markdown-toc)
   - [Supporting packages](#supporting-packages)
   - [Usage](#usage)
@@ -24,7 +25,8 @@ This pre-commit-hooks repository contains the following hooks.
 
 | Hook name     | Description |
 |---------------|------------|
-|terraform-docs| Inserts input and output documentation into README.md (using terraform-docs).|
+|terraform-docs| Inserts input and output documentation into `README.md` (using terraform-docs).|
+|terraform-docs-adoc|Inserts input and output documentation into `README.adoc` (using terraform-docs).|
 |terraform-validate|Validates all Terraform configuration files.|
 |terraform-sec|Static analysis of Terraform templates to spot potential security issues.|
 |terraform-lint|Validates all Terraform configuration files with TFLint.|
@@ -78,6 +80,24 @@ For updating Markdown documentation with information that is generated from Terr
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ```
+
+### terraform-docs-adoc
+
+For updating Asciidoctor documentation with information that is generated from Terraform, you will need to add the following 2 lines in the document.
+
+```md
+// BEGIN TERRAFORM ASCIIDOC
+// END TERRAFORM ASCIIDOC
+```
+
+Default, the `README.adoc` in the ROOT of the repository will be updated. You can also specify a different asciidoctor file:
+
+```yaml
+    - id: terraform-docs-adoc
+      args: ["-s src", "-f documentation/index.adoc"]
+```
+
+Where `-f` is the location to the asciidoctor file. With `-s` you can override and specify a directory containing the Terraform code (Default `.` is used).
 
 ### markdown-toc
 
