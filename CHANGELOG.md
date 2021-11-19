@@ -6,6 +6,7 @@
 
 **Implemented enhancements:**
 
+- Add terraform asciidoc [\#15](https://github.com/dj-wasabi/pre-commit-hooks/pull/15) ([dj-wasabi](https://github.com/dj-wasabi))
 - Added script that not allows any commits on configured branch [\#12](https://github.com/dj-wasabi/pre-commit-hooks/pull/12) ([dj-wasabi](https://github.com/dj-wasabi))
 - Added hook for creating a Table of Contents for Markdown files [\#8](https://github.com/dj-wasabi/pre-commit-hooks/pull/8) ([dj-wasabi](https://github.com/dj-wasabi))
 - Added verify-json|yaml scripts [\#7](https://github.com/dj-wasabi/pre-commit-hooks/pull/7) ([dj-wasabi](https://github.com/dj-wasabi))
