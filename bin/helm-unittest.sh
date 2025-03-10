@@ -8,4 +8,4 @@ if which helm &> /dev/null $? != 0 ; then
     exit 1
 fi
 
-helm unittest -3 .
+helm unittest .
