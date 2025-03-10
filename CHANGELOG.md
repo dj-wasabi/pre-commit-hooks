@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.1.1) (2025-03-10)
+
+[Full Changelog](https://github.com/dj-wasabi/pre-commit-hooks/compare/0.1.0...0.1.1)
+
+**Merged pull requests:**
+
+- Update helm-unittest.sh [\#16](https://github.com/dj-wasabi/pre-commit-hooks/pull/16) ([davidcollom](https://github.com/davidcollom))
+
 ## [0.1.0](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.1.0) (2021-11-19)
 
 [Full Changelog](https://github.com/dj-wasabi/pre-commit-hooks/compare/0.0.3...0.1.0)
@@ -29,11 +37,6 @@
 **Implemented enhancements:**
 
 - Update documentation regarding available hooks [\#6](https://github.com/dj-wasabi/pre-commit-hooks/pull/6) ([dj-wasabi](https://github.com/dj-wasabi))
-- Added GH Action to automatically update CHANGELOG.md [\#5](https://github.com/dj-wasabi/pre-commit-hooks/pull/5) ([dj-wasabi](https://github.com/dj-wasabi))
-
-**Fixed bugs:**
-
-- Removal of Ansible lint [\#3](https://github.com/dj-wasabi/pre-commit-hooks/pull/3) ([dj-wasabi](https://github.com/dj-wasabi))
 
 ## [0.0.2](https://github.com/dj-wasabi/pre-commit-hooks/tree/0.0.2) (2020-12-21)
 
@@ -49,10 +52,12 @@
 
 **Implemented enhancements:**
 
+- Added GH Action to automatically update CHANGELOG.md [\#5](https://github.com/dj-wasabi/pre-commit-hooks/pull/5) ([dj-wasabi](https://github.com/dj-wasabi))
 - Added shellcheck script [\#2](https://github.com/dj-wasabi/pre-commit-hooks/pull/2) ([dj-wasabi](https://github.com/dj-wasabi))
 
 **Fixed bugs:**
 
+- Removal of Ansible lint [\#3](https://github.com/dj-wasabi/pre-commit-hooks/pull/3) ([dj-wasabi](https://github.com/dj-wasabi))
 - Fix helm-lint and terraform-tfsec scripts [\#1](https://github.com/dj-wasabi/pre-commit-hooks/pull/1) ([dj-wasabi](https://github.com/dj-wasabi))
 
 
